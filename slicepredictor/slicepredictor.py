@@ -1,12 +1,14 @@
 import torch
 from torchvision import transforms
+import sys
 from dataloaders import custom_transforms as tr
 import tifffile
 import numpy as np
 import os
 import cv2
 from PIL import Image
-from slicepredictor.slicepredictorbase import SlicePredictorBase
+sys.path.append(os.path.dirname(__file__))
+from slicepredictorbase import SlicePredictorBase
 
 
 class SlicePredictorRS(SlicePredictorBase):
